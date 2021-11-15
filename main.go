@@ -80,8 +80,6 @@ func Scan_worker(wg *sync.WaitGroup, rawContents bool) {
 
 func init() {
 
-	// TODO: Remove matches item and stick it all under behaviors as nested map[string]map[string]int{} so we can see what the behavior mapped too.
-
 	//// Generics
 	cm.GlobalMap.Function_Generics = []cm.RegexDef{{
 		Name:        "Generic_URL_Decode",
@@ -399,10 +397,10 @@ func init() {
 func main() {
 
 	start := time.Now()
-	var dir = flag.String("dir", "", "Directory to scan for web shells")
-	var size = flag.Int64("size", 10, "Specify max file size to scan (default is 10 MB)")
-	var verbose = flag.Bool("verbose", false, "If set to true, the analyzer will print all files analyzer, not just matches")
-	var rawContents = flag.Bool("raw_contents", false, "If a match is found, grab the raw contents and base64 + gzip compress the file into the JSON object.")
+	var dir = flag.String("dir", "", "Thu Muc Se Scan Shell")
+	var size = flag.Int64("size", 10, "dung luong file toi da duoc scan mac dinh 10Mb")
+	var verbose = flag.Bool("verbose", false, "neu dat la true thi in ra all ket qua")
+	var rawContents = flag.Bool("raw_contents", false, "set true neu tim thay shell noi dung chua base64 thi tien hanh giai ma doan code do.")
 	flag.Parse()
 
 	if *dir == "" {
